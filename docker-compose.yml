@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_PASSWORD: "pass134"
     ports:
-      - "15432:5432"
+      - "5432:5432"
     volumes:
       - /home/rsouza/Desenvolvimento/Docker-Compose/PostgreSQL:/var/lib/postgresql/data 
     networks:

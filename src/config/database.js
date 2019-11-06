@@ -1,11 +1,11 @@
 module.exports = {
   dialect: 'postgres',
-  host: '172.20.0.2',
+  host: 'localhost',
   username: 'postgres',
   password: 'pass1234',
   database: 'sqlnode',
   define: {
-    tymestamps: true,
+    timestamps: true,
     underscored: true
   }
 }
