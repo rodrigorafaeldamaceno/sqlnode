@@ -1,10 +1,17 @@
 const Sequelize = require('sequelize')
 const dbConfig = require('../config/database')
+
 const User = require('../models/User')
+const Address = require('../models/Address')
+// console.log(dbConfig)
+const connection = new Sequelize(dbConfig)
 
-console.log(dbConfig)
-const conn = new Sequelize(dbConfig)
+User.init(connection)
+Address.init(connection)
 
-User.init(conn)
+User.associate(connection.models)
+Address.associate(connection.models)
 
-module.exports = conn
+
+console.log(connection.models)
+module.exports = connection
